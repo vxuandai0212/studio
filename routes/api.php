@@ -48,11 +48,12 @@ Route::get('studios/{studio}', 'StudioController@show');
 
 // Customer email resources
 Route::group(['middleware' => 'auth:api'], function() {
-    Route::get('mails', 'MailController@index');
-    Route::get('mails/{mail}', 'MailController@show');
-    Route::put('mails/{mail}', 'MailController@update');
-    Route::delete('mails/{mail}', 'MailController@delete');
+    
 });
+Route::get('mails', 'MailController@index');
+Route::get('mails/{mail}', 'MailController@show');
+Route::put('mails/{mail}', 'MailController@update');
+Route::delete('mails/{mail}', 'MailController@delete');
 Route::post('mails', 'MailController@store');
 
 Route::post('register', 'Auth\RegisterController@register');
