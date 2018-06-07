@@ -19,7 +19,7 @@ class PhotosTableSeeder extends Seeder
         for ($i = 0; $i < 20; $i++) {
             $id = $i + 1;
             $category_id = rand(1, 5);
-            $url_image = "assets/img/upload/"."$id".".jpg";
+            $url_image = $id.".jpg";
             Photo::create([
                 'category_id' => $category_id,
                 'name' => $faker->sentence,
