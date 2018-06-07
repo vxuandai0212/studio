@@ -4,7 +4,7 @@
       <div class="row form-group">
       <div class="col-12">
           <input type="file" id="file-input" name="image" class="form-control-file">
-          <img style="max-height: 350px;" id="blah" src="../../{{$photo->url_image}}" alt="{{$photo->name}}" />
+          <img style="max-height: 350px;" id="blah" src="https://res.cloudinary.com/fit1501040028/image/upload/v1528381017/{{$photo->url_image}}" alt="{{$photo->name}}" />
       </div>
       </div>
   </div>

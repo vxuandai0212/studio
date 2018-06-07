@@ -121,11 +121,11 @@
                     <button class="btn" type="button" data-filter=".lifestyle">Lifestyle</button>
                 </div>
             </div>
-
+            
             <div class="row portfolio-column">
                 @foreach ($photos as $photo)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item {{strtolower($photo->category->name)}}">
-                    <img src="{{$photo->url_image}}" alt="{{$photo->name}}">
+                    <img src="https://res.cloudinary.com/fit1501040028/image/upload/v1528381627/{{$photo->url_image}}" alt="{{$photo->name}}">
                     <div class="hover_overlay">
                         <a class="gallery_img" href="{{$photo->url_image}}"><i class="fa fa-eye"></i></a>
                     </div>

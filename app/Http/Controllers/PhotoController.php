@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Photo;
+use JD\Cloudder\Facades\Cloudder;
 
 class PhotoController extends Controller
 {
@@ -19,11 +20,15 @@ class PhotoController extends Controller
 
     public function store(Request $request)
     {
+        $cl_upload = $request->image->getPathName();
+        Cloudder::upload($cl_upload);
+        $cl_photo_id = Cloudder::getPublicId();
         $photoName = time().'.'.$request->image->getClientOriginalExtension();
+        
         $photo = new Photo;
         $photo->category_id = $request->select;
         $photo->name = $request->title;
-        $photo->url_image = "assets/img/upload/".$photoName;
+        $photo->url_image = $cl_photo_id;
         if($request->slideshow == null){
             $photo->is_slide_show = false;
         }else{

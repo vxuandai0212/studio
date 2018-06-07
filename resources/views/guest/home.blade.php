@@ -120,7 +120,7 @@
             <div class="carousel-inner h-100">
                 @foreach ($photos as $photo)
                     @if ($loop->first)
-                    <div class="carousel-item h-100 bg-img active" style="background-image: url({{$photo->url_image}});">
+                    <div class="carousel-item h-100 bg-img active" style="background-image: url(https://res.cloudinary.com/fit1501040028/image/upload/v1528381017/{{$photo->url_image}});">
                         <div class="carousel-content h-100">
                             <div class="slide-text">
                                 <span>0{{$loop->iteration}}.</span>
@@ -129,7 +129,7 @@
                         </div>
                     </div>
                     @else
-                    <div class="carousel-item h-100 bg-img" style="background-image: url({{$photo->url_image}});">
+                    <div class="carousel-item h-100 bg-img" style="background-image: url(https://res.cloudinary.com/fit1501040028/image/upload/v1528381017/{{$photo->url_image}});">
                         <div class="carousel-content h-100">
                             <div class="slide-text">
                                 <span>0{{$loop->iteration}}.</span>
@@ -144,9 +144,9 @@
             <ol class="carousel-indicators">
                 @foreach ($photos as $photo)
                     @if ($loop->first)
-                    <li data-target="#welcomeSlider" data-slide-to="{{$loop->index}}" class="active bg-img" style="background-image: url({{$photo->url_image}});"></li>
+                    <li data-target="#welcomeSlider" data-slide-to="{{$loop->index}}" class="active bg-img" style="background-image: url(https://res.cloudinary.com/fit1501040028/image/upload/v1528381017/{{$photo->url_image}});"></li>
                     @else
-                    <li data-target="#welcomeSlider" data-slide-to="{{$loop->index}}" class="bg-img" style="background-image: url({{$photo->url_image}});"></li>
+                    <li data-target="#welcomeSlider" data-slide-to="{{$loop->index}}" class="bg-img" style="background-image: url(https://res.cloudinary.com/fit1501040028/image/upload/v1528381017/{{$photo->url_image}});"></li>
                     @endif    
                 @endforeach
             </ol>

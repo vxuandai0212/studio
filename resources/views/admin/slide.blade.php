@@ -44,7 +44,7 @@
               <tbody>
               @foreach($photos as $photo)
                 <tr>
-                  <td><img src="../{{$photo->url_image}}" alt="{{$photo->name}}"></td>
+                  <td><img src="https://res.cloudinary.com/fit1501040028/image/upload/v1528381017/{{$photo->url_image}}" alt="{{$photo->name}}"></td>
                   <td>{{$photo->name}}</td>
                   <td>{{$photo->category->name}}</td>
                   <td style>
